@@ -3,7 +3,6 @@ import express from "express";
 import router from "./routes";
 import "reflect-metadata";
 import { AppDataSource } from "./data-source";
-import cors from "cors";
 
 const app = express();
 AppDataSource.initialize()
@@ -11,8 +10,6 @@ AppDataSource.initialize()
   .catch((error) => console.log(error));
 app.use(express.json());
 app.use(router);
-
-app.use(cors);
 
 const port = process.env.PORT || 3000;
 
