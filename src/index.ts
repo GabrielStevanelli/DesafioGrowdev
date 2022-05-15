@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import router from "./routes";
 import "reflect-metadata";
@@ -10,4 +11,6 @@ AppDataSource.initialize()
 app.use(express.json());
 app.use(router);
 
-app.listen(3000);
+const port = process.env.APP_PORT || 3000;
+
+app.listen(port);
