@@ -1,5 +1,6 @@
 import { DataSource } from "typeorm";
 import { Comment } from "./entity/Comment";
+import { Contact } from "./entity/Contact";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
@@ -10,7 +11,7 @@ export const AppDataSource = new DataSource({
   database: "d1n8ufr19h77h0",
   synchronize: true,
   logging: true,
-  entities: [Comment],
+  entities: [Comment, Contact],
   ssl: true,
   extra: {
     ssl: {

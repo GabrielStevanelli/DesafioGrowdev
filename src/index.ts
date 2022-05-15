@@ -10,4 +10,4 @@ AppDataSource.initialize()
 app.use(express.json());
 app.use(router);
 
-app.listen(8080);
+app.listen(3000);
